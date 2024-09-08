@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px; box-sizing: border-box;
+            /* border: 2px solid black; */
+        }
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+              position: sticky;
+        top: 0px ;
+        left: 0px;
+        right: 0px;
+        background-color: white;    
+        box-shadow: 1px 1px 1px 0px rgb(156, 151, 151);
+        }
+        .rightside{
+            display: flex;
+            justify-content: center;
+        }
+        .item{
+            padding:10px 0px;
+            font-size: large;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .item:hover{
+            color: white;
+            background-color: black;
+            transform: scale(1.1);
+        }
+        .list{
+            display: flex;    
+        }
+        .list-item{
+            padding: 10px;
+            list-style: none;
+            font-size: large;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .list-item:hover{
+            background-color: grey;
+            transform: scale(1.1);
+            color: white;
+        }
+        @media only screen and (max-width:700px){
+            .list-item{
+                display:none;}   
+        }
+        .container{
+            height:100%;
+        }
+        .main{
+            border: 2px solid white;
+            height: 100%;
+            background-image: url(./image/architect.jpg);
+            background-size: cover;
+
+        }
+        .text{
+            height: 100%;
+             margin:300px;
+             display: flex;
+             justify-content: center;
+             /* transform: rotate(-20deg); */}
+        .text:hover{
+            transform: scale(1.2);
+        }     
+        .maintext{
+            background-color:rgb(90, 126, 90);
+            color: white;
+            font-size:60px;
+            font-weight: 300px;
+            padding: 5px;
+        }
+        .maintext1{
+            color: white;
+            padding: 5px;
+            font-size: 60px;}
+        @media only screen and (max-width:1000px){
+            .text{
+                margin: 250px;
+               }  
+                .maintext,.maintext1{
+                    font-size:50px;
+                }     
+        }
+        @media only screen and (max-width:860px){
+            .text{
+                margin: 200px;
+                }  
+                .maintext,.maintext1{
+                    font-size:40px;
+                }    
+        }
+        @media only screen and (max-width:700px){
+            .text{
+                margin: 150px;
+                }
+                .maintext,.maintext1{
+                    font-size:30px;
+                }   
+
+        }
+    .project{
+        padding: 30px 0px 0px 10px;
+        font-style: inherit;
+        text-transform: capitalize;
+        box-shadow: 1px 1px 0px 0px rgb(156, 151, 151);
+    } 
+    .projectpicture{
+        height: 100%;
+        padding: 20px 40px;
+    }
+    .picturemain{
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .picture1{
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        background-image: url(./image/house5.jpg);
+    }
+    .picture2{
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        background-image: url(./image/house2.jpg);
+    }
+    .picture3{
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        background-image: url(./image/house3.jpg);
+    }
+    .picture4{
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        background-image: url(./image/house5.jpg);
+    }
+    .picGrapgh{
+        margin: 0px 150px 0px 0px;
+        color: white;
+        font-style:inherit;
+        background-color: black;
+        font-size: 20px;
+        padding: 10px;
+    }
+    @media only screen and (max-width:1330px){
+            .picGrapgh{
+                font-size: 15px;
+                margin: 0px 120px 0px 0px;
+                }
+            .picture1,.picture2,.picture3,.picture4{
+                width: 270px;
+
+            }
+        }
+        @media only screen and (max-width:1200px){
+            .picGrapgh{
+                font-size: 13px;
+                margin: 0px 100px 0px 0px;
+
+                }
+            .picture1,.picture2,.picture3,.picture4{
+                width: 230px;
+                height: 270px;
+            }
+        }
+        @media only screen and (max-width:1050px){
+            .picGrapgh{
+                font-size: 10px;
+                margin: 0px 70px 0px 0px;
+                }
+            .picture1,.picture2,.picture3,.picture4{
+                width: 190px;
+                height: 230px;
+            }
+        }
+        @media only screen and (max-width:930px){
+            .picGrapgh{
+                font-size: 8px;
+                margin: 0px 50px 0px 0px;
+                }
+            .picture1,.picture2,.picture3,.picture4{
+                width: 150px;
+                height: 200px;
+            }
+        }
+        @media only screen and (max-width:800px){
+            .picturemain{
+                display: block;
+            }
+            .picture1,.picture2,.picture3,.picture4{
+                margin: 10px;
+                width: 250px;
+            }
+            .picGrapgh{
+                font-size: 15px;
+                margin: 0px 120px 0px 0px;
+                }
+        }
+    .text_Picture{
+        padding:0px 40px 40px 40px;
+    }
+    .textimages{
+        display: flex;
+        justify-content: space-between;
+    }
+    .image{
+        margin-top: 20px;
+        background-color:rgb(199, 186, 186);
+        border-radius: 7px;
+    }
+    .image img{
+        height: 300px;
+        width: 250px;
+    }
+    .heading{
+        text-align: center;
+    }
+    .btn{
+        margin: 10px;
+        margin-left: 50px;
+        padding: 5px 40px;
+        text-transform: capitalize;
+        font-size: 20px;
+        background-color: rgb(238, 214, 170);
+        border-color: rgb(255, 221, 127);
+    }
+    .btn:hover{
+        transform: scale(1.2);
+    }
+    .number,.facebook,.insta{
+        padding: 5px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        color:black;
+        border: 2px solid transparent;
+    }
+    .number:hover,.facebook:hover,.insta:hover{
+        border: 1px solid black;
+    }
+    .fa-whatsapp{
+        color: rgb(16, 207, 16);
+    }
+    .fa-instagram{
+        color: rgb(230, 18, 166);
+    }
+    .fa-facebook{
+        color: rgb(26, 98, 233);
+    }
+   .fa-facebook:hover,.fa-instagram:hover,.fa-whatsapp:hover{
+    transform: scale(1.3);
+   }
+   @media only screen and (max-width:1130px){
+          .image,.image img{
+            width: 200px;
+          }
+          .image img{
+            height: 250px;
+        }
+          .btn{
+            font-size: 15px;
+            margin-left: 30px;
+          }
+          .number,.facebook,.insta{
+        padding: 3px;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        color:black;
+        font-size: smaller; 
+            }
+    }  
+    @media only screen and (max-width:930px){
+        .image img{
+            height: 200px;
+        }
+          .image,.image img{
+            width: 150px;
+          }
+          .btn{
+            font-size: 12px;
+            margin-left: 20px;
+          }
+          .number,.facebook,.insta{
+        padding: 1.5px;
+        text-transform: capitalize;
+        letter-spacing: 0.3px;
+        color:black;
+        font-size: small; 
+      
+            }
+    }  
+    @media only screen and (max-width:700px){
+       .textimages{
+        display: block;
+        justify-content: center;
+        margin-left: 50px;
+       }
+       .image,.image img{
+            width: 280px;
+          }
+          .image img{
+            height: 300px;
+        }
+          .btn{
+            font-size: 20px;
+            margin-left: 40px;
+          }
+          .number,.facebook,.insta{
+        padding: 5px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        color:black;
+        font-size: larger; 
+            }
+    } 
+
+    .conc{
+        padding: 10px;
+        padding-top: 60px;
+        text-transform: capitalize;
+        box-shadow: 0px 1px 1px 0px gray;
+    }
+    input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} 
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.form{
+    padding: 10px 40px;
+}
+
+.para{
+margin: 20px;
+font-family:'Times New Roman', Times, serif,
+}
+.loction{
+    padding: 10px 40px;
+
+}
+.footer{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+   
+}
+.footerpara{
+    text-align: center;
+    padding: 20px 5px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+
+}
+.footerpara:hover{
+transform: scale(1.1);
+}
+       
+
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="rightside">
+           <strong class="item">Br</strong><p class="item">Architerch</p>
+        </div>
+        <div class="leftside">
+            <ul class="list">
+                <li class="list-item">project</li>
+                <li class="list-item">contact</li>
+                <li class="list-item">Abouct</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main">
+            <div class="text"><strong class="maintext">Br</strong>
+            <p class="maintext1">Archicture</p></div>   
+        </div>
+        <div class="project">
+            <h2 class="project">project</h2>
+        </div>
+        <div class="projectpicture">
+          <div class="picturemain">
+             <div class="picture1"><p class="picGrapgh">Summer House</p></div>
+             <div class="picture2"><p class="picGrapgh">Brick House</p></div>
+             <div class="picture3"><p class="picGrapgh">Renovated</p></div>
+             <div class="picture4"><p class="picGrapgh">Barn House</p></div>
+         </div>
+         <div class="picturemain">
+            <div class="picture1"><p class="picGrapgh">Summer House</p></div>
+            <div class="picture2"><p class="picGrapgh">Brick House</p></div>
+            <div class="picture3"><p class="picGrapgh">Renovated</p></div>
+            <div class="picture4"><p class="picGrapgh">Barn House</p></div>
+        </div>
+        </div>
+        <h2 class="project">About</h2>
+        <div class="text_Picture">
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="textimages">
+                <div class="image">
+                    <img src="./image/WhatsApp Image 2024-09-07 at 23.40.25_291d8c07.jpg" alt="" width="250px">
+                    <h1 class="heading">Hammad</h1>
+                    <p class="tpara"> &nbsp;Student of BSCS</p>
+                    <button class="btn">Contact</button>
+                    <div class="number">whatsapp:-<i class="fa-brands fa-whatsapp"></i>+92129724430</div>
+                    <div class="insta">Insta:-<i class="fa-brands fa-instagram"></i> H__m_a_i0048</div>
+                    <div class="facebook">Facebook:-<i class="fa-brands fa-facebook"></i>Hammad Arshad</div>
+                </div>
+                <div class="image">
+                    <img src="./image/WhatsApp Image 2024-09-07 at 23.40.26_d866dff9.jpg" alt="" width="250px">
+                    <h1 class="heading">Hammad</h1>
+                    <p class="tpara"> &nbsp;Student of BSCS</p>
+                    <button class="btn">Contact</button>
+                    <div class="number">whatsapp:-<i class="fa-brands fa-whatsapp"></i>+92129724430</div>
+                    <div class="insta">Insta:-<i class="fa-brands fa-instagram"></i> H__m_a_i0048</div>
+                    <div class="facebook">Facebook:-<i class="fa-brands fa-facebook"></i>Hammad Arshad</div>
+                </div>
+                <div class="image">
+                    <img src="./image/WhatsApp Image 2024-09-07 at 23.41.12_718eb805.jpg" alt="" width="250px">
+                    <h1 class="heading">Hammad</h1>
+                    <p class="tpara"> &nbsp;Student of BSCS</p>
+                    <button class="btn">Contact</button>
+                    <div class="number">whatsapp:-<i class="fa-brands fa-whatsapp"></i>+92129724430</div>
+                    <div class="insta">Insta:-<i class="fa-brands fa-instagram"></i> H__m_a_i0048</div>
+                    <div class="facebook">Facebook:-<i class="fa-brands fa-facebook"></i>Hammad Arshad</div>
+                </div>
+                <div class="image">
+                    <img src="./image/WhatsApp Image 2024-09-07 at 23.41.12_bf36e856.jpg" alt="" width="250px">
+                    <h1 class="heading">Hammad</h1>
+                    <p class="tpara"> &nbsp;Student of BSCS</p>
+                    <button class="btn">Contact</button>
+                    <div class="number">whatsapp:-<i class="fa-brands fa-whatsapp"></i>+92129724430</div>
+                    <div class="insta">Insta:-<i class="fa-brands fa-instagram"></i> H__m_a_i0048</div>
+                    <div class="facebook">Facebook:-<i class="fa-brands fa-facebook"></i>Hammad Arshad</div>
+                </div>
+                
+            </div>
+        </div>
+        <h1 class="conc">contact</h1>
+
+    <div class="contact">
+        <p class="para">Lets get in touch and talk about your next project.</p>
+    <form action="" class="form">
+        <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your name..">
+
+    <label for="email">Email</label>
+    <input type="text" name="emil" placeholder="@gmil.com">
+    
+    <label for="number">Phone No</label>
+    <input type="text" name="number" placeholder="enter a phone number">
+    
+    
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="pakistan">Pakistan</option>
+      <option value="ajk">Ajk</option>
+    </select>
+    
+    <label for="text">Dob</label>
+    <input type="text" name="Dob" placeholder="date of birth">
+
+    <label for="text">CNIC</label>
+    <input type="text" name="CNIC" placeholder="CNIC">
+
+    <label for="number">Date</label>
+    <input type="datetime-local" name="Date" placeholder="enter a date">
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+  <div class="loction">
+    <img src="./image/map.jpg" alt="" width="100%">
+  </div>
+  <div class="footer">
+    <p class="footerpara">hammadarshad88888@gmail.com</p>
+
+  </div>
+
+
+</div>
+    
+</body>
+</html>
